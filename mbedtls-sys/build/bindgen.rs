@@ -88,6 +88,7 @@ impl super::BuildConfig {
             ))
             .use_core()
             .derive_debug(false) // buggy :(
+            .derive_default(true)
             .parse_callbacks(Box::new(ParseCallback))
             .ctypes_prefix("crate::types::raw_types")
             .blacklist_function("strtold")
